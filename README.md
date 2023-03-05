@@ -11,3 +11,23 @@ In the above command `--publish or -p` is used for `port` mapping, `3000` indica
 docker top nginx
 ```
 it will list out the all processes running inside the container.
+
+### Inspect a container
+```
+docker inspect container 
+```
+### Performance stats of all containers
+```
+docker stats containers
+```
+
+### Docker network concepts 
+
+#### Container port
+``` docker container port conatiner
+80/tcp -> 0.0.0.0:80
+```
+#### Container IPAddress
+``` 
+docker container inspect --format '{{.NetworkSettings.IPAddress}}' container
+```
